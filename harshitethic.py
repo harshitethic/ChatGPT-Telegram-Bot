@@ -123,4 +123,4 @@ def retry(bot, update):
     cache = None
     qcache = None
     botname = 'Harshit Ethic'
-    username = 'h
+    username = 'h'
