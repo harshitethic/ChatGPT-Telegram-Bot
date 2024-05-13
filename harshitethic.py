@@ -1,4 +1,4 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from datetime import datetime
 import json, os, string, sys, threading, logging, time, re, random
@@ -123,5 +123,4 @@ def retry(bot, update):
     cache = None
     qcache = None
     botname = 'Harshit Ethic'
-    username = 'harshitethic_bot'
-    update.message.
+    username = 'h
