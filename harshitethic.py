@@ -4,21 +4,9 @@ from datetime import datetime
 import json, os, string, sys, threading, logging, time, re, random
 import openai
 
-#OpenAI API key
-aienv = os.getenv('OPENAI_KEY')
-if aienv == None:
-    openai.api_key = "ENTER YOUR API KEY HERE"
-else:
-    openai.api_key = aienv
-print(aienv)
-
-#Telegram bot key
-tgenv = os.getenv('TELEGRAM_KEY')
-if tgenv == None:
-    tgkey = "ENTER YOUR TELEGRAM TOKEN HERE"
-else:
-    tgkey = tgenv
-print(tgenv)
+# Read credentials from environment. Never print or hard-code secrets.
+from config import read_credentials
+openai.api_key, tgkey = read_credentials()
 
 # Lots of console output
 debug = True
